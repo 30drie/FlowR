@@ -32,5 +32,8 @@ exec { & dotnet build -c Release }
 
 exec { & dotnet test -c Release --no-build -l trx --verbosity=normal }
 
+# Pack core library
 exec { & dotnet pack .\src\FlowR\FlowR.csproj -c Release -o $artifacts --no-build }
+# Pack contracts library
+exec { & dotnet pack .\src\FlowR.Contracts\FlowR.Contracts.csproj -c Release -o $artifacts --no-build }
 
