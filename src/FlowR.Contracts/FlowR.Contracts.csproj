@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <Nullable>enable</Nullable>
-    <Authors>Pekagi Team</Authors>
+    <Authors>30drie</Authors>
     <Description>Contract package for requests, responses, and notifications</Description>
-    <Copyright>Copyright Pekagi</Copyright>
+    <Copyright>Copyright 30drie</Copyright>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Features>strict</Features>
     <PackageTags>mediator;request;response;queries;commands;notifications;workflow;flow</PackageTags>
@@ -18,7 +18,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Deterministic>true</Deterministic>
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
     <RootNamespace>FlowR</RootNamespace>
     <AssemblyName>FlowR.Contracts</AssemblyName>
   </PropertyGroup>
