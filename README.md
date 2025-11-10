@@ -1,5 +1,8 @@
-# FlowR
-<hr>
+FlowR
+=====
+
+[![NuGet](https://img.shields.io/nuget/dt/flowr.svg)](https://www.nuget.org/packages/flowr)
+[![NuGet Version](https://img.shields.io/nuget/v/FlowR.svg?style=flat-square)](https://www.nuget.org/packages/FlowR/)
 
 ## About FlowR
 
@@ -14,7 +17,7 @@ The library enables:
 - Support for synchronous and asynchronous code
 - Full compatibility with legacy MediatR projects
 
-## Installation (coming soon)
+## Installation
 
 FlowR can be easily installed via NuGet:
 
@@ -28,7 +31,7 @@ Or via the .NET Core command line:
 dotnet add package FlowR
 ```
 
-## Using Only the Contracts (coming soon)
+## Using Only the Contracts
 
 To use only the contract classes and interfaces (useful when you only need definitions in a separate assembly):
 
