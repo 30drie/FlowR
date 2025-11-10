@@ -18,7 +18,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Deterministic>true</Deterministic>
-    <Version>3.0.1</Version>
+    <Version>3.0.3</Version>
     <RootNamespace>FlowR</RootNamespace>
     <AssemblyName>FlowR.Contracts</AssemblyName>
   </PropertyGroup>
