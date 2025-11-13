@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <RootNamespace>FlowR.Benchmarks</RootNamespace>
     <AssemblyName>FlowR.Benchmarks</AssemblyName>
+    <TargetFrameworks>net10.0;net8.0;net9.0</TargetFrameworks>
   </PropertyGroup>
   <PropertyGroup>
     <PlatformTarget>AnyCPU</PlatformTarget>

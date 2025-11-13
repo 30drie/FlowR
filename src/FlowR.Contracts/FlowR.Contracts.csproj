@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <Nullable>enable</Nullable>
-    <Authors>30drie</Authors>
+    <Authors>30drie, jbogard</Authors>
     <Description>Contract package for requests, responses, and notifications</Description>
-    <Copyright>Copyright 30drie</Copyright>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <Copyright>Copyright 30drie / Lucky Penny Software / Jimmy Bogard</Copyright>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Features>strict</Features>
     <PackageTags>mediator;request;response;queries;commands;notifications;workflow;flow</PackageTags>
     <SignAssembly>true</SignAssembly>
@@ -18,7 +18,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Deterministic>true</Deterministic>
-    <Version>3.0.3</Version>
+    <Version>10.0.0-beta</Version>
     <RootNamespace>FlowR</RootNamespace>
     <AssemblyName>FlowR.Contracts</AssemblyName>
   </PropertyGroup>

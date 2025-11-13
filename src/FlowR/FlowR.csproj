@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Authors>30drie</Authors>
+    <Authors>30drie, jbogard</Authors>
     <Description>Elegant and efficient mediator implementation for .NET with focus on workflow automation</Description>
-    <Copyright>Copyright 30drie</Copyright>
-    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <Copyright>Copyright 30drie / Lucky Penny Software / Jimmy Bogard</Copyright>
+    <TargetFrameworks>net10.0;net8.0;netstandard2.1;net9.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <Features>strict</Features>
     <PackageTags>mediator;request;response;queries;commands;notifications;workflow;flow</PackageTags>
@@ -23,7 +23,7 @@
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     <RootNamespace>FlowR</RootNamespace>
     <AssemblyName>FlowR</AssemblyName>
-    <Version>3.0.3</Version>
+    <Version>10.0.0-beta</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
