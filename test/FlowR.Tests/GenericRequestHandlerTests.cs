@@ -93,6 +93,7 @@ namespace FlowR.Tests
             hasDuplicates.ShouldBeFalse();
         }
 
+#if NET8_0
         [Fact]
         public void ShouldThrowExceptionWhenTypesClosingExceedsMaximum()
         {
@@ -173,7 +174,8 @@ namespace FlowR.Tests
             })
             .Message.ShouldBe("The generic handler registration process timed out.");
         }
-
+#endif
+        
         [Fact]
         public void ShouldNotRegisterGenericHandlersWhenOptingOut()
         {
