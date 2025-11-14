@@ -20,7 +20,7 @@ namespace FlowR.Tests.MicrosoftExtensionsDI
             CreateAssemblyModuleBuilder("ExceedsMaximumGenericTypeParametersAssembly", 1, 1, CreateHandlerForExceedsMaximumGenericTypeParametersTest);
 
         protected static Assembly GenerateTimeoutOccursAssembly() =>
-            CreateAssemblyModuleBuilder("TimeOutOccursAssembly", 400, 3, CreateHandlerForTimeoutOccursTest);
+            CreateAssemblyModuleBuilder("TimeOutOccursAssembly", 4000, 30, CreateHandlerForTimeoutOccursTest);
 
         protected static Assembly GenerateOptOutAssembly() =>
             CreateAssemblyModuleBuilder("OptOutAssembly", 2, 2, CreateHandlerForOptOutTest);
