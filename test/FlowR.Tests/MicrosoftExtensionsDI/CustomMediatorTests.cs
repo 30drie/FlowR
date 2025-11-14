@@ -6,6 +6,7 @@ using Xunit;
 
 namespace FlowR.Tests.MicrosoftExtensionsDI;
 
+[Collection("Serial_AddFlowR")]
 public class CustomMediatorTests
 {
     private readonly IServiceProvider _provider;

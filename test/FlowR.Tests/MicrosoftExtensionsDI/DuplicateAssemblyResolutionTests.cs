@@ -6,6 +6,7 @@ using Xunit;
 
 namespace FlowR.Tests.MicrosoftExtensionsDI;
 
+[Collection("Serial_AddFlowR")]
 public class DuplicateAssemblyResolutionTests
 {
     private readonly IServiceProvider _provider;

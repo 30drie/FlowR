@@ -9,6 +9,7 @@ using Xunit.Abstractions;
 
 namespace FlowR.Tests;
 
+[Collection("Serial_AddFlowR")]
 public class NotificationPublisherTests
 {
     private readonly ITestOutputHelper _output;

@@ -14,6 +14,7 @@ using FlowR.Tests.MicrosoftExtensionsDI;
 
 namespace FlowR.Tests
 {
+    [Collection("Serial_AddFlowR")]
     public class GenericRequestHandlerTests : BaseGenericRequestHandlerTests
     {
 

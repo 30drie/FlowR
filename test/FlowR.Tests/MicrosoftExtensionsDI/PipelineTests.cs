@@ -12,6 +12,7 @@ using Xunit;
 
 namespace FlowR.Tests.MicrosoftExtensionsDI;
 
+[Collection("Serial_AddFlowR")]
 public class PipelineTests
 {
     public class OuterBehavior : IPipelineBehavior<Ping, Pong>

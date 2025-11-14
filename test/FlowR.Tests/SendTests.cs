@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace FlowR.Tests;
+
+[Collection("Serial_AddFlowR")]
 public class SendTests
 {
     private readonly IServiceProvider _serviceProvider;
