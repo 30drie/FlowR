@@ -15,7 +15,7 @@ public static class ServiceRegistrar
     private static int MaxGenericTypeParameters;
     private static int MaxTypesClosing;
     private static int MaxGenericTypeRegistrations;
-    private static int RegistrationTimeout; 
+    private static int RegistrationTimeout;
 
     public static void SetGenericRequestHandlerRegistrationLimitations(FlowRServiceConfiguration configuration)
     {
@@ -27,7 +27,9 @@ public static class ServiceRegistrar
 
     public static void AddFlowRClassesWithTimeout(IServiceCollection services, FlowRServiceConfiguration configuration)
     {
-        using(var cts = new CancellationTokenSource(RegistrationTimeout))
+        // Use the static timeout configured for the process; if 0, do not time out
+        var timeout = RegistrationTimeout;
+        using(var cts = timeout > 0 ? new CancellationTokenSource(timeout) : new CancellationTokenSource())
         {
             try
             {
@@ -278,13 +280,13 @@ public static class ServiceRegistrar
             foreach (var list in lists)
             {
                 totalCombinations *= list.Count;
-                if (MaxGenericTypeParameters > 0 && totalCombinations > MaxGenericTypeRegistrations)
+                if (MaxGenericTypeRegistrations > 0 && totalCombinations > MaxGenericTypeRegistrations)
                     throw new ArgumentException($"Error registering the generic type: {requestType.FullName}. The total number of generic type registrations exceeds the maximum allowed ({MaxGenericTypeRegistrations}).");
             }
         }
 
         if (depth >= lists.Count)
-            return new List<List<Type>> { new List<Type>() };
+            return [[]];
        
         cancellationToken.ThrowIfCancellationRequested();
 
