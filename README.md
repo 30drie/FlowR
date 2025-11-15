@@ -4,6 +4,9 @@ FlowR
 [![NuGet](https://img.shields.io/nuget/dt/flowr.svg)](https://www.nuget.org/packages/flowr)
 [![NuGet Version](https://img.shields.io/nuget/v/FlowR.svg?style=flat-square)](https://www.nuget.org/packages/FlowR/)
 
+## Versions
+Version 10.0.1 is just released. The main change is the change in TFM's: .NET Standard 2.1, .NET 8.0, .NET 9.0 and .NET 10.0. This means FlowR 10.0 (and onwards) does not have support for .NET Framework. For .NET Framework use a version of FlowR 3 which is identical Mediatr 12.5.0.
+
 ## About FlowR
 
 FlowR is an open-source continuation of the MediatR library, which will become commercial starting with version 13. This fork aims to maintain the simplicity and power of the original while ensuring it remains freely available to the community.
@@ -160,5 +163,4 @@ For small applications or during development, traditional assembly scanning migh
 
 ## License
 
-FlowR is available under the Apache 2.0 license. See LICENSE for details.
-Hint: FlowR will stay free to use
+FlowR is available under the Apache 2.0 license. See LICENSE for details. FlowR will stay free to use
