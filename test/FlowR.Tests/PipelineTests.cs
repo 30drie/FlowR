@@ -262,7 +262,7 @@ public class PipelineTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        var response = await mediator.Send(new Ping { Message = "Ping" });
+        var response = await mediator.Send(new Ping { Message = "Ping" }, CancellationToken.None);
 
         response.Message.ShouldBe("Ping Pong");
 
@@ -300,7 +300,7 @@ public class PipelineTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        await mediator.Send(new VoidPing { Message = "Ping" });
+        await mediator.Send(new VoidPing { Message = "Ping" }, CancellationToken.None);
 
         output.Messages.ShouldBe(new []
         {
@@ -336,7 +336,7 @@ public class PipelineTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        var response = await mediator.Send(new Ping { Message = "Ping" });
+        var response = await mediator.Send(new Ping { Message = "Ping" }, CancellationToken.None);
 
         response.Message.ShouldBe("Ping Pong");
 
@@ -376,7 +376,7 @@ public class PipelineTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        await mediator.Send(new VoidPing { Message = "Ping" });
+        await mediator.Send(new VoidPing { Message = "Ping" }, CancellationToken.None);
 
         output.Messages.ShouldBe(new[]
         {
@@ -415,7 +415,7 @@ public class PipelineTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        var response = await mediator.Send(new Ping { Message = "Ping" });
+        var response = await mediator.Send(new Ping { Message = "Ping" }, CancellationToken.None);
 
         response.Message.ShouldBe("Ping Pong");
 
@@ -432,7 +432,7 @@ public class PipelineTests
 
         output.Messages.Clear();
 
-        var zingResponse = await mediator.Send(new Zing { Message = "Zing" });
+        var zingResponse = await mediator.Send(new Zing { Message = "Zing" }, CancellationToken.None);
 
         zingResponse.Message.ShouldBe("Zing Zong");
 
@@ -472,7 +472,7 @@ public class PipelineTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        var response = await mediator.Send(new Ping { Message = "Ping" });
+        var response = await mediator.Send(new Ping { Message = "Ping" }, CancellationToken.None);
 
         response.Message.ShouldBe("Ping Pong");
 
@@ -489,7 +489,7 @@ public class PipelineTests
 
         output.Messages.Clear();
 
-        var zingResponse = await mediator.Send(new Zing { Message = "Zing" });
+        var zingResponse = await mediator.Send(new Zing { Message = "Zing" }, CancellationToken.None);
 
         zingResponse.Message.ShouldBe("Zing Zong");
 

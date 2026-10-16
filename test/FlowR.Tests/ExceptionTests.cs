@@ -97,7 +97,7 @@ public class ExceptionTests
         Exception ex = null!;
         try
         {
-            await _mediator.Publish(new Pinged());
+            await _mediator.Publish(new Pinged(), CancellationToken.None);
         }
         catch (Exception e)
         {
@@ -124,7 +124,7 @@ public class ExceptionTests
         Exception ex = null!;
         try
         {
-            await _mediator.Publish(new AsyncPinged());
+            await _mediator.Publish(new AsyncPinged(), CancellationToken.None);
         }
         catch (Exception e)
         {

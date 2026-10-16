@@ -113,7 +113,7 @@ public class RequestExceptionActionTests
         var mediator = container.GetInstance<IMediator>();
 
         var request = new Ping { Message = "Ping!" };
-        await Assert.ThrowsAsync<PingException>(() => mediator.Send(request));
+        await Assert.ThrowsAsync<PingException>(() => mediator.Send(request, CancellationToken.None));
 
         pingExceptionAction.Executed.ShouldBeTrue();
         pingPongExceptionAction.Executed.ShouldBeTrue();
@@ -136,7 +136,7 @@ public class RequestExceptionActionTests
         var mediator = container.GetInstance<IMediator>();
 
         var request = new Ping { Message = "Ping!" };
-        await Assert.ThrowsAsync<PingException>(() => mediator.Send(request));
+        await Assert.ThrowsAsync<PingException>(() => mediator.Send(request, CancellationToken.None));
 
         genericExceptionAction.ExecutionCount.ShouldBe(1);
     }

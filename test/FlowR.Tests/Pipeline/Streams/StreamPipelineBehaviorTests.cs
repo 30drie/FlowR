@@ -66,7 +66,7 @@ public class StreamPipelineBehaviorTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        var responses = mediator.CreateStream(new Sing { Message = "Sing" });
+        var responses = mediator.CreateStream(new Sing { Message = "Sing" }, CancellationToken.None);
 
         int i = 0;
         await foreach (var response in responses)

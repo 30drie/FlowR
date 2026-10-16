@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -28,7 +29,7 @@ public class ServiceFactoryTests
         var mediator = new Mediator(serviceProvider, new FlowR.NotificationPublishers.TaskWhenAllPublisher());
 
         await Assert.ThrowsAsync<InvalidOperationException>(
-            () => mediator.Send(new Ping())
+            () => mediator.Send(new Ping(), CancellationToken.None)
         );
     }
 }

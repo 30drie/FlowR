@@ -1,5 +1,6 @@
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Shouldly;
 using Xunit;
@@ -36,10 +37,7 @@ public class NotificationHandlerTests
 
         INotificationHandler<Ping> handler = new PongChildHandler(writer);
 
-        await handler.Handle(
-            new Ping() { Message = "Ping" },
-            default
-        );
+        await handler.Handle(new Ping { Message = "Ping" }, CancellationToken.None);
 
         var result = builder.ToString();
         result.ShouldContain("Ping Pong");

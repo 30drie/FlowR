@@ -38,11 +38,11 @@ public class NotificationPublisherTests
         var provider = services.BuildServiceProvider();
         var mediator = provider.GetService<IMediator>();
 
-        ShouldBeNullExtensions.ShouldNotBeNull(mediator);
+        mediator.ShouldNotBeNull();
 
         var publisher = provider.GetService<INotificationPublisher>();
 
-        ShouldBeNullExtensions.ShouldNotBeNull(publisher);
+        publisher.ShouldNotBeNull();
     }
 
     [Fact]
@@ -60,9 +60,9 @@ public class NotificationPublisherTests
         var provider = services.BuildServiceProvider();
         var mediator = provider.GetService<IMediator>();
 
-        ShouldBeNullExtensions.ShouldNotBeNull(mediator);
+        mediator.ShouldNotBeNull();
 
-        await mediator.Publish(new Pinged());
+        await mediator.Publish(new Pinged(), CancellationToken.None);
         
         publisher.CallCount.ShouldBeGreaterThan(0);
     }
@@ -83,12 +83,12 @@ public class NotificationPublisherTests
         var mediator = provider.GetService<IMediator>();
         var publisher = provider.GetService<INotificationPublisher>();
 
-        ShouldBeNullExtensions.ShouldNotBeNull(mediator);
-        ShouldBeNullExtensions.ShouldNotBeNull(publisher);
+        mediator.ShouldNotBeNull();
+        publisher.ShouldNotBeNull();
 
-        await mediator.Publish(new Pinged());
+        await mediator.Publish(new Pinged(), CancellationToken.None);
 
-        var mock = ShouldBeTestExtensions.ShouldBeOfType<MockPublisher>(publisher);
+        var mock = publisher.ShouldBeOfType<MockPublisher>();
 
         mock.CallCount.ShouldBeGreaterThan(0);
     }
@@ -109,11 +109,11 @@ public class NotificationPublisherTests
         var mediator = provider.GetService<IMediator>();
         var publisher = provider.GetService<INotificationPublisher>();
 
-        ShouldBeNullExtensions.ShouldNotBeNull(mediator);
-        ShouldBeNullExtensions.ShouldNotBeNull(publisher);
+        mediator.ShouldNotBeNull();
+        publisher.ShouldNotBeNull();
 
-        await Should.NotThrowAsync(mediator.Publish(new Pinged()));
+        await Should.NotThrowAsync(mediator.Publish(new Pinged(), CancellationToken.None));
 
-        ShouldBeTestExtensions.ShouldBeOfType<TaskWhenAllPublisher>(publisher);
+        publisher.ShouldBeOfType<TaskWhenAllPublisher>();
     }
 }

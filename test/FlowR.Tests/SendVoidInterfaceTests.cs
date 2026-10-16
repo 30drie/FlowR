@@ -51,7 +51,7 @@ public class SendVoidInterfaceTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        await mediator.Send(new Ping { Message = "Ping" });
+        await mediator.Send(new Ping { Message = "Ping" }, CancellationToken.None);
 
         builder.ToString().ShouldBe("Ping Pong");
     }

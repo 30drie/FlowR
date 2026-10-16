@@ -49,7 +49,7 @@ public class CreateStreamTests
 
         var mediator = container.GetInstance<IMediator>();
 
-        var response = mediator.CreateStream(new Ping { Message = "Ping" });
+        var response = mediator.CreateStream(new Ping { Message = "Ping" }, CancellationToken.None);
         int i = 0;
         await foreach (Pong result in response)
         {
@@ -83,7 +83,7 @@ public class CreateStreamTests
         var mediator = container.GetInstance<IMediator>();
 
         object request = new Ping { Message = "Ping" };
-        var response = mediator.CreateStream(request);
+        var response = mediator.CreateStream(request, CancellationToken.None);
         int i = 0;
         await foreach (Pong? result in response)
         {
@@ -115,7 +115,7 @@ public class CreateStreamTests
         });
 
         var mediator = container.GetInstance<ISender>();
-        var response = mediator.CreateStream(new Ping { Message = "Ping" });
+        var response = mediator.CreateStream(new Ping { Message = "Ping" }, CancellationToken.None);
         int i = 0;
         await foreach (Pong result in response)
         {

@@ -115,7 +115,7 @@ public class GenericTypeConstraintsTests
         var jing = new Jing { Message = "Jing" };
 
         // Test mediator still works sending request
-        await _mediator.Send(jing);
+        await _mediator.Send(jing, CancellationToken.None);
 
         // Create new instance of type constrained class
         var genericTypeConstraintsVoidReturn = new  GenericTypeConstraintJing();
@@ -141,7 +141,7 @@ public class GenericTypeConstraintsTests
         var ping = new Ping { Message = "Ping" };
 
         // Test mediator still works sending request and gets response
-        var pingResponse = await _mediator.Send(ping);
+        var pingResponse = await _mediator.Send(ping, CancellationToken.None);
         pingResponse.Message.ShouldBe("Ping Pong");
 
         // Create new instance of type constrained class
