@@ -30,7 +30,7 @@ exec { & dotnet clean -c Release }
 
 exec { & dotnet build -c Release }
 
-exec { & dotnet test -c Release --no-build -l trx --verbosity=normal }
+exec { & dotnet test -c Release --no-build --report-trx --verbosity normal }
 
 # Pack core library
 exec { & dotnet pack .\src\FlowR\FlowR.csproj -c Release -o $artifacts --no-build }
