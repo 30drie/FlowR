@@ -5,7 +5,11 @@ FlowR
 [![NuGet Version](https://img.shields.io/nuget/v/FlowR.svg?style=flat-square)](https://www.nuget.org/packages/FlowR/)
 
 ## Versions
-Version 10.0.1 is just released. The main change is the change in TFM's: .NET Standard 2.1, .NET 8.0, .NET 9.0 and .NET 10.0. This means FlowR 10.0 (and onwards) does not have support for .NET Framework. For .NET Framework use a version of FlowR 3 which is identical Mediatr 12.5.0.
+### Version 10.1
+Upgraded NuGet packages with specific versions for .NET 8.0 and .NET 10.0
+
+### Version 10.0.1
+The main change is the change in TFM's: .NET Standard 2.1, .NET 8.0, .NET 9.0 and .NET 10.0. This means FlowR 10.0 (and onwards) does not have support for .NET Framework. For .NET Framework use a version of FlowR 3 which is identical Mediatr 12.5.0.
 
 ## About FlowR
 
